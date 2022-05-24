@@ -6,10 +6,10 @@ public class HeapSort {
     int n;
 
     public void accept(){
-        System.out.println("Enter the value of n :");
+        System.out.print("Enter the value of n :");
         n = sc.nextInt();
         heap = new int[n+1];
-        System.out.println("Enter element of array :");
+        System.out.print("Enter element of array :");
         for (int i = 1; i < n+1; i++) {
             heap[i] = sc.nextInt();
         }
@@ -24,7 +24,7 @@ public class HeapSort {
 
     public void downAdj(int i){
         int j;
-        while (2*i<heap[0]){
+        while (2*i<=heap[0]){
             j = 2*i;
             if (j+1<=heap[0] && heap[j]<heap[j+1]){
                 j++;
