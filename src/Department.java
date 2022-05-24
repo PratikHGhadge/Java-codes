@@ -4,11 +4,8 @@ import java.io.IOException;
 import java.util.Scanner;
 
 interface DepartmentInterface {
-
     void writeRecord(String name, String department, int rollNumber);
-
     void readRecords();
-
 }
 
 
@@ -16,7 +13,6 @@ public class Department implements DepartmentInterface{
 
     private File file;
     private FileWriter writer;
-
     private static String FILE_NAME = "temp.txt";
 
 
@@ -53,13 +49,9 @@ public class Department implements DepartmentInterface{
         System.out.println("1. Add record");
         System.out.println("2. Read all records");
         System.out.println("3. Exit");
-
         int choice;
-
         System.out.print("Enter your choice: ");
-
         choice = sc.nextInt();
-
         return choice;
     }
 
@@ -88,10 +80,7 @@ public class Department implements DepartmentInterface{
                 case 2 -> dept.readRecords();
                 default -> run = false;
             }
-
         }
-
     }
-
 }
 
